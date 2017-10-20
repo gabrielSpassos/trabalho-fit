@@ -1,97 +1,61 @@
-//Classes necessárias para uso de Banco de dados //
-import java.sql.Connection;
-
-import java.sql.DriverManager;
-
-import java.sql.SQLException;
-
-//Início da classe de conexão//
+import java.sql.*;
 
 public class ConnectionFactory {
 
-    public static String status = "Não conectou...";
+    private static final  String DRIVER = "com.mysql.jdbc.Driver";
+    private static final  String URL = "jdbc:mysql://localhost:3306/appfit";
+    private static final  String USER = "root";
+    private static final  String PASS = "Inter#2104";
 
-    public ConnectionFactory() {
+    public static Connection getConnection(){
+        try {
+            Class.forName(DRIVER);
+
+            return DriverManager.getConnection(URL,USER,PASS);
+
+        } catch (ClassNotFoundException | SQLException e ){
+            throw new RuntimeException("Erro na conexão: ",e);
+        }
 
     }
 
-    //Método de Conexão//
+    public static void closeConnection(Connection con){
 
-    public static java.sql.Connection getConexaoMySQL() {
-
-        Connection connection = null;
         try {
-
-            // Carregando o JDBC Driver padrão
-
-            String driverName = "com.mysql.jdbc.Driver";
-
-            Class.forName(driverName);
-            // Configurando a nossa conexão com um banco de dados//
-
-            String serverName = "localhost";
-            String mydatabase = "appfit";
-            String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
-            String username = "root";
-            String password = "Inter#2104";
-
-            connection = DriverManager.getConnection(url, username, password);
-
-            if (connection != null) {
-
-                status = ("STATUS--->Conectado com sucesso!");
-
-            } else {
-
-                status = ("STATUS--->Não foi possivel realizar conexão");
-
+            if(con!=null) {
+                con.close();
             }
-            return connection;
-
-        } catch (ClassNotFoundException e) {  //Driver não encontrado
-
-            System.out.println("O driver expecificado nao foi encontrado.");
-
-            return null;
-
         } catch (SQLException e) {
-
-            System.out.println("Nao foi possivel conectar ao Banco de Dados.");
-
-            return null;
-
+            e.printStackTrace();
         }
 
+    }
 
+    public static void closeConnection(Connection con, PreparedStatement stmt){
 
-
-
+        closeConnection(con);
+        try {
+            if(stmt!=null){
+                stmt.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
-    public static String statusConection() {
+    public static void closeConnection(Connection con, PreparedStatement stmt, ResultSet rs){
 
-        return status;
-
-    }
-
-    public static boolean FecharConexao() {
+        closeConnection(con,stmt);
 
         try {
-
-            ConnectionFactory.getConexaoMySQL().close();
-
-            return true;
-
+           if(rs != null){
+               rs.close();
+           }
         } catch (SQLException e) {
-
-            return false;
+            e.printStackTrace();
         }
+
     }
 
-    public static java.sql.Connection ReiniciarConexao() {
-
-        FecharConexao();
-        return ConnectionFactory.getConexaoMySQL();
-    }
 }
