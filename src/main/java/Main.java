@@ -10,18 +10,27 @@ public class Main {
 
         AlimentoDAO alimentoDAO = new AlimentoDAO();
         Menu menu = new Menu();
+        Usuario usuarioLogin = new Usuario();
 
         byte sair = 0;
         do {
             String opcao = menu.menuInicial();
             switch (opcao) {
                 case "1":
-                    menu.caseCriarUsuario();
+                    try {
+                        usuarioLogin = menu.caseLogin();
+                        menu.listarDadosLogin(usuarioLogin);
+                    }catch (NullPointerException e){
+                        System.out.println(ANSI_RED + "Login Invalido" + ANSI_RESET);
+                    }
                     break;
                 case "2":
-                    menu.caseListarUsuarios();
+                    menu.caseCriarUsuario();
                     break;
                 case "3":
+                    menu.caseListarUsuarios();
+                    break;
+                case "4":
                     try{
                         menu.caseAtualizarUsuarioPegarNome();
                     }catch (MinhaException e){
@@ -29,7 +38,7 @@ public class Main {
                         continue;
                     }
                     break;
-                case "4":
+                case "5":
                     try{
                         menu.caseExcluiUsuarioPegarNome();
                     }catch (MinhaException e){
@@ -37,30 +46,8 @@ public class Main {
                         continue;
                     }
                     break;
-                case "5":
-                    String opcaoRefeicao = menu.menuAlimentos();
-                    List<Alimento> alimentosList = null;
-                    switch (opcaoRefeicao) {
-                    case "1":
-                        alimentosList = alimentoDAO.read(100,1);
-                        break;
-                    case "2":
-                        alimentosList = alimentoDAO.read(100,2);
-                        break;
-                    case "3":
-                        alimentosList = alimentoDAO.read(100,3);
-                        break;
-                    default:
-                        System.out.println("Opção inválida");
-                }
-
-                    if(alimentosList!=null){
-                        for(int i = 0;i<alimentosList.size();i++){
-                            System.out.println("Nome do alimento: "+alimentosList.get(i).getNome());
-                            System.out.println("Calorias do alimento: "+alimentosList.get(i).getCalorias());
-                            System.out.println("");
-                        }
-                    }
+                case "6":
+                    menu.menuAlimentos(usuarioLogin);
                     break;
                 case "x":
                     sair = 1;

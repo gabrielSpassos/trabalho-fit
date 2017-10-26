@@ -8,6 +8,26 @@ public class ControllerMenu {
     UsuarioDAO pessoaDAO = new UsuarioDAO();
     Usuario pessoa = new Usuario();
 
+    public Usuario loginUsuario(String nomeLogin){
+        Usuario user = null;
+        try{
+            List<Usuario> listaUsuario = new ArrayList<>();
+            listaUsuario = pessoaDAO.read();
+            for(int i = 0;i<listaUsuario.size();i++){
+                if(listaUsuario.get(i).getNome().equalsIgnoreCase(nomeLogin)){
+                    System.out.println("Login com sucesso");
+                    return listaUsuario.get(i);
+                }
+            }
+
+            return user;
+        }catch (MinhaException e){
+            throw new MinhaException("Erro Login Invalido");
+        }
+
+    }
+
+
     public void createUsuario(String nome,double peso, double altura){
         Usuario pessoa = new Usuario();
         try {

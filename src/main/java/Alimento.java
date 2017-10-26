@@ -21,19 +21,4 @@ public class Alimento {
         this.calorias = calorias;
     }
 
-    public String calculaCaloriasbyGramas (double gramasInformadas){
-        String retorno;
-
-        if(gramasInformadas<0){
-            retorno = "Não pode ser informado valor negativo de peso";
-        }else{
-            double calculo = (gramasInformadas * getCalorias())/100;
-            retorno = String.valueOf(calculo);
-        }
-
-        return retorno;
-    }
-
-
-
 }

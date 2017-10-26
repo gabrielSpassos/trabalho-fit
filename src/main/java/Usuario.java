@@ -5,9 +5,6 @@ public class Usuario {
     private double peso;
     private int id;
 
-    public double calculaIMC (){
-        return ((this.getPeso()) / (this.getAltura() * this.getAltura()));
-    }
 
     public String getNome() {
         return nome;
@@ -16,7 +13,6 @@ public class Usuario {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
 
     public double getAltura() {
         return altura;

@@ -82,7 +82,7 @@ public class UsuarioDAO{
 
    }
 
-   public List getNomeFromUsuario(){
+   public List<Usuario> getNomeFromUsuario(){
 
        Connection connection = ConnectionFactory.getConnection();
        PreparedStatement preparedStatement = null;

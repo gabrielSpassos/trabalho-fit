@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Scanner;
@@ -12,15 +13,29 @@ public class Menu {
     public String menuInicial() {
         System.out.println("\n**Projeto Fit da Massa**\n");
         System.out.println("**MENU**");
-        System.out.println("1 - Cadastrar novo usuário");
-        System.out.println("2 - Listar usuários cadastrados");
-        System.out.println("3 - Atualizar Cadastro");
-        System.out.println("4 - Excluir Cadastro");
-        System.out.println("5 - Lista de Alimentos");
+        System.out.println("1 - Fazer Login");
+        System.out.println("2 - Cadastrar novo usuário");
+        System.out.println("3 - Listar usuários cadastrados");
+        System.out.println("4 - Atualizar Cadastro");
+        System.out.println("5 - Excluir Cadastro");
+        System.out.println("6 - Lista de Alimentos da Dieta");
         System.out.println("X - Sair");
         System.out.print("\nDigite sua opção: ");
         String opcao = ler.nextLine();
         return opcao;
+    }
+
+    public Usuario caseLogin(){
+        System.out.println("\n**Login**\n");
+        System.out.print("Digite seu nome: ");
+        String nomeLogin = ler.nextLine();
+        return controllerMenu.loginUsuario(nomeLogin);
+    }
+
+    public void listarDadosLogin(Usuario user){
+        System.out.println("\nLogin: "+user.getNome());
+        System.out.println("Peso: "+user.getPeso());
+        System.out.println("Altura: "+user.getAltura());
     }
 
     public void caseCriarUsuario(){
@@ -77,13 +92,14 @@ public class Menu {
         controllerMenu.deleteUsuario(idExclusao);
     }
 
-    public String menuAlimentos(){
+    public void menuAlimentos(Usuario user){
         System.out.println("\n**Seleção de Refeição**\n");
         System.out.println("1 - Café da Manhã");
         System.out.println("2 - Almoço");
         System.out.println("3 - Janta");
         System.out.print("Digite sua opção: ");
         String opcaoRetorno = ler.nextLine();
-        return opcaoRetorno;
+        ControllerAlimento controllerAlimento = new ControllerAlimento();
+        controllerAlimento.listarAlimentosDaDieta(user,opcaoRetorno);
     }
 }
