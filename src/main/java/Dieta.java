@@ -1,6 +1,6 @@
 public class Dieta {
 
-    Usuario user;
+    Usuario user = new Usuario();
 
     public Dieta(Usuario user){
         this.user = user;

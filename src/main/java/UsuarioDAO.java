@@ -23,7 +23,7 @@ public class UsuarioDAO{
 
             System.out.println("Salvo com Sucesso");
         } catch (SQLException e) {
-            System.out.println("Erro ao salvar: "+e);
+            throw new MinhaException("Erro, não foi possível cadastrar usuário");
         }finally {
             ConnectionFactory.closeConnection(con,stmt);
         }
@@ -58,7 +58,8 @@ public class UsuarioDAO{
        return usuarios;
    }
 
-   public int getIdbyName(String nome){
+   public int getIdbyName(String nome) throws MinhaException {
+
 
        Connection connection = ConnectionFactory.getConnection();
        PreparedStatement preparedStatement = null;
@@ -73,11 +74,35 @@ public class UsuarioDAO{
            return id;
 
        } catch (SQLException e) {
-           System.out.println("Erro ao pegar o ID pelo Nome");
-           return -1;
+           throw new MinhaException("Erro, não foi possível encontrar um ID pelo nome passado");
 
        }finally {
            ConnectionFactory.closeConnection(connection,preparedStatement,rs);
+       }
+
+   }
+
+   public List getNomeFromUsuario(){
+
+       Connection connection = ConnectionFactory.getConnection();
+       PreparedStatement preparedStatement = null;
+       ResultSet resultSet = null;
+       List<Usuario> listaNomesUsuario = new ArrayList<Usuario>();
+       try{
+           preparedStatement = connection.prepareStatement("SELECT nome FROM usuario");
+           resultSet = preparedStatement.executeQuery();
+
+           while (resultSet.next()){
+               Usuario user = new Usuario();
+               user.setNome(resultSet.getString("nome"));
+               listaNomesUsuario.add(user);
+           }
+           return listaNomesUsuario;
+
+       }catch (SQLException e){
+           throw new MinhaException("Erro ao listas nomes");
+       }finally {
+           ConnectionFactory.closeConnection(connection,preparedStatement,resultSet);
        }
 
    }
@@ -95,7 +120,7 @@ public class UsuarioDAO{
 
             System.out.println("Atualizado com Sucesso");
         } catch (SQLException e) {
-            System.out.println("Erro ao atualizar: "+e);
+            throw new MinhaException("Erro, não foi possível encontrar o usuário");
         }finally {
             ConnectionFactory.closeConnection(con,stmt);
         }
@@ -104,15 +129,13 @@ public class UsuarioDAO{
     public void delete (int id){
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
-
         try {
             stmt  = con.prepareStatement("DELETE FROM usuario WHERE id = ?");
             stmt.setInt(1,id);
             stmt.executeUpdate();
-
             System.out.println("Excluido com Sucesso");
         } catch (SQLException e) {
-            System.out.println("Erro ao excluir: "+e);
+            throw new MinhaException("Erro, não foi possível deletar usuário");
         }finally {
             ConnectionFactory.closeConnection(con,stmt);
         }
