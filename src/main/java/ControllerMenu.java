@@ -1,5 +1,6 @@
 import com.sun.xml.internal.org.jvnet.mimepull.MIMEParsingException;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -104,6 +105,12 @@ public class ControllerMenu {
             System.out.println(e.getMessage());
         }
 
+    }
+
+    public double pegaImcUsuario (Usuario user){
+        Calculadora calculadora = new Calculadora();
+        double retorno = calculadora.calculaIMC(user.getPeso(),user.getAltura());
+        return retorno;
     }
 
 

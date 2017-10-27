@@ -20,6 +20,7 @@ public class Main {
                     try {
                         usuarioLogin = menu.caseLogin();
                         menu.listarDadosLogin(usuarioLogin);
+                        menu.mostraImcUsuario(usuarioLogin);
                     }catch (NullPointerException e){
                         System.out.println(ANSI_RED + "Login Invalido" + ANSI_RESET);
                     }

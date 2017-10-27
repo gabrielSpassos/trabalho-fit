@@ -1,4 +1,3 @@
-import javax.sound.midi.Soundbank;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Scanner;
@@ -101,5 +100,9 @@ public class Menu {
         String opcaoRetorno = ler.nextLine();
         ControllerAlimento controllerAlimento = new ControllerAlimento();
         controllerAlimento.listarAlimentosDaDieta(user,opcaoRetorno);
+    }
+
+    public void mostraImcUsuario(Usuario user){
+        System.out.printf("IMC do usuário: %.2f", controllerMenu.pegaImcUsuario(user));
     }
 }
