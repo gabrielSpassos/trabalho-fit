@@ -1,3 +1,5 @@
+import services.Dieta;
+import model.Usuario;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;

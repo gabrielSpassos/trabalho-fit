@@ -1,4 +1,4 @@
-import com.sun.istack.internal.logging.Logger;
+package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,6 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.Usuario;
+import db.ConnectionFactory;
+import model.MinhaException;
 
 public class UsuarioDAO{
 

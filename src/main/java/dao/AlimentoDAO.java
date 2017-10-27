@@ -1,3 +1,9 @@
+package dao;
+
+import model.Alimento;
+import model.MinhaException;
+import db.ConnectionFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

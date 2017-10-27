@@ -1,3 +1,5 @@
+package model;
+
 public class MinhaException extends RuntimeException {
     private String msg;
 

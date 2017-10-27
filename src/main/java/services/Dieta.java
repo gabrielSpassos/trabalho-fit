@@ -1,3 +1,8 @@
+package services;
+
+import model.Usuario;
+
+
 public class Dieta {
 
     public double caloriasLimite;
@@ -18,4 +23,6 @@ public class Dieta {
             return this.caloriasLimite = 50; //está obeso
         }
     }
+
+
 }

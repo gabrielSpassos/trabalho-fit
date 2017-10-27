@@ -1,6 +1,8 @@
+import dao.AlimentoDAO;
+import model.Alimento;
+import services.Calculadora;
+import model.Usuario;
 import org.junit.Test;
-
-import java.util.Scanner;
 
 import static junit.framework.TestCase.assertEquals;
 
