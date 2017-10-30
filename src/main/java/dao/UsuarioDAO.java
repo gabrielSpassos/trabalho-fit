@@ -26,7 +26,7 @@ public class UsuarioDAO{
 
             System.out.println("Salvo com Sucesso");
         } catch (SQLException e) {
-            throw new MinhaException("Erro, não foi possível cadastrar usuário");
+            throw new MinhaException("Não foi possível cadastrar usuário");
         }finally {
             ConnectionFactory.closeConnection(con,stmt);
         }
@@ -77,7 +77,7 @@ public class UsuarioDAO{
            return id;
 
        } catch (SQLException e) {
-           throw new MinhaException("Erro, não foi possível encontrar um ID pelo nome passado");
+           throw new MinhaException("Não foi possível encontrar um ID pelo nome passado");
 
        }finally {
            ConnectionFactory.closeConnection(connection,preparedStatement,rs);

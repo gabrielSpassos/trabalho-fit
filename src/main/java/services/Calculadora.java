@@ -18,4 +18,9 @@ public class Calculadora {
 
         return retorno;
     }
+
+    public double calculaCaloriasRestantes(double totalCaloriasLimiteDiarias, double caloriasComidas){
+        return totalCaloriasLimiteDiarias = totalCaloriasLimiteDiarias - caloriasComidas;
+    }
+
 }

@@ -14,6 +14,11 @@ public class ControllerAlimento {
 
     AlimentoDAO alimentoDAO = new AlimentoDAO();
 
+    public void listarAlimentosDaDieta(Usuario userDieta, String opcaoRefeicao){
+        Dieta dieta = new Dieta(userDieta);
+        double caloriasLimite = dieta.decideCaloriasLimites();
+        imprimeListaDeAlimentos(opcaoRefeicao,caloriasLimite);
+    }
 
     private void imprimeListaDeAlimentos(String opcaoRefeicao, double caloriasLimite){
         List<Alimento> alimentosList = null;
@@ -39,15 +44,6 @@ public class ControllerAlimento {
         }
     }
 
-
-    public void listarAlimentosDaDieta(Usuario userDieta, String opcaoRefeicao){
-        Dieta dieta = new Dieta(userDieta);
-        double caloriasLimite = dieta.decideCaloriasLimites();
-        imprimeListaDeAlimentos(opcaoRefeicao,caloriasLimite);
-        System.out.println("Calorias Limite: "+caloriasLimite);
-
-    }
-
     public String mostraCaloriasDoAlimentoPorGramas(Usuario userDieta, String opcaoDeRefeicao,String nomeDigitado, double quantidadeEmGramas){
         try{
             if(validaNomeAlimentoComBanco(nomeDigitado,userDieta,opcaoDeRefeicao)){
@@ -65,7 +61,7 @@ public class ControllerAlimento {
     }
 
     private boolean validaNomeAlimentoComBanco(String nomeDigitado,Usuario userDieta,String opcaoRefeicao){
-        List<Alimento> listaAlimentos = new ArrayList<Alimento>();
+        List<Alimento> listaAlimentos;
         Dieta dieta = new Dieta(userDieta);
         double caloriasLimite = dieta.decideCaloriasLimites();
         Integer opcaoDeRefeicao = Integer.parseInt(opcaoRefeicao);
@@ -80,6 +76,20 @@ public class ControllerAlimento {
         }catch (MinhaException e){
             throw new MinhaException("Falha ao localizar nome no banco de dados");
         }
+    }
+
+    public double calculaSubtracaoDasCaloriasDiarias(Dieta dietaMetodo, double caloriasComidas, boolean primeiraRefeicaoDia){
+        double totalCaloriasLimiteDiarias;
+        Calculadora calculadora = new Calculadora();
+
+        if(primeiraRefeicaoDia) {
+            totalCaloriasLimiteDiarias = dietaMetodo.decideTotalCaloriasLimiteDiarias();
+        }else{
+            totalCaloriasLimiteDiarias = dietaMetodo.getTotalCaloriasLimiteDiarias();
+        }
+        double subtracaoCalorias = calculadora.calculaCaloriasRestantes(totalCaloriasLimiteDiarias,caloriasComidas);
+        dietaMetodo.setTotalCaloriasLimiteDiarias(subtracaoCalorias);
+        return subtracaoCalorias;
     }
 
 

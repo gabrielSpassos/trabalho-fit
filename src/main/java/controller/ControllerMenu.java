@@ -25,9 +25,13 @@ public class ControllerMenu {
                 }
             }
 
+            if (user == null){
+                throw new MinhaException("usuário nulo");
+            }
+
             return user;
         }catch (MinhaException e){
-            throw new MinhaException("Erro Login Invalido");
+            throw new MinhaException("Login Invalido");
         }
 
     }

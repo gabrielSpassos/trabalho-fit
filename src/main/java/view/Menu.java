@@ -3,6 +3,8 @@ package view;
 import model.Usuario;
 import controller.ControllerMenu;
 import controller.ControllerAlimento;
+import services.Dieta;
+
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Scanner;
@@ -140,13 +142,24 @@ public class Menu {
         return opcao;
     }
 
-    public void mostrarCaloriasPorNome(Usuario user, String opcaoDeRefeicao){
+    public String mostrarCaloriasTotaisPorNome(Usuario user, String opcaoDeRefeicao){
         System.out.print("\nDigite o nome da refeição feita: ");
         String nomeRefeicao = ler.nextLine();
         System.out.print("\nDigite quantos gramas você comeu de "+nomeRefeicao+": ");
         double quantidadeEmGramas = ler.nextDouble();
         String caloriasTotais = controllerAlimento.mostraCaloriasDoAlimentoPorGramas(user, opcaoDeRefeicao,nomeRefeicao,quantidadeEmGramas);
-        System.out.println("Calorias totais ingeridas: "+caloriasTotais);
+        System.out.printf("Calorias totais ingeridas: "+caloriasTotais+"\n");
+        return caloriasTotais;
+    }
+
+    public double mostrarRestanteDeCaloriasDiarias(Dieta dieta, double caloriasTotais, boolean primeiraRefeicaoDia){
+        double subtracaoCaloriasDiarias = controllerAlimento.calculaSubtracaoDasCaloriasDiarias(dieta,caloriasTotais, primeiraRefeicaoDia);
+        System.out.printf("Restante de calorias que voce pode comer hoje é: %.2f\n",subtracaoCaloriasDiarias);
+        return subtracaoCaloriasDiarias;
+    }
+
+    public void mostrarMensagemVolteSempre(){
+        System.out.println("Pode voltar sempre ;)");
     }
 
 
