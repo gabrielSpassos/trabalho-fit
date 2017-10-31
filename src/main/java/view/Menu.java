@@ -52,7 +52,7 @@ public class Menu {
         System.out.println("**Menu de Login**");
         System.out.println("1 - Mostrar suas informações");
         System.out.println("2 - Lista de Alimentos da Dieta");
-        System.out.println("X - Voltar ao menu alterior");
+        System.out.println("X - Voltar ao menu anterior");
         System.out.print("\nDigite sua opção: ");
         String opcao = ler.nextLine();
         return opcao;

@@ -42,6 +42,9 @@ public class Main {
                             case "2":
                                 //case de informar refeicao
                                 String opcaoDeRefeicao = menu.imprimeMenuRefeicoes(usuarioLogin);
+                                if(!(opcaoDeRefeicao.equals("1"))|| !(opcaoDeRefeicao.equals("2")) || !(opcaoDeRefeicao.equals("3"))){
+                                    break;
+                                }
                                 String validadorDoIf = menu.validaInsercaoRefeicao();
                                 if(validadorDoIf.equals("1")){
                                     try {
