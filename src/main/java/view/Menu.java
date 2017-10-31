@@ -151,12 +151,12 @@ public class Menu {
         return opcao;
     }
 
-    public String mostrarCaloriasTotaisPorNome(Usuario user, String opcaoDeRefeicao){
+    public double mostrarCaloriasTotaisPorNome(Usuario user, String opcaoDeRefeicao){
         System.out.print("\nDigite o nome da refeição feita: ");
         String nomeRefeicao = ler.nextLine();
         System.out.print("\nDigite quantos gramas/litros você comeu de "+nomeRefeicao+": ");
         double quantidadeEmGramas = ler.nextDouble();
-        String caloriasTotais = controllerAlimento.mostraCaloriasDoAlimentoPorGramas(user, opcaoDeRefeicao,nomeRefeicao,quantidadeEmGramas);
+        double caloriasTotais = controllerAlimento.mostraCaloriasDoAlimentoPorGramas(user, opcaoDeRefeicao,nomeRefeicao,quantidadeEmGramas);
         System.out.printf("Calorias totais ingeridas: "+caloriasTotais+"\n");
         return caloriasTotais;
     }

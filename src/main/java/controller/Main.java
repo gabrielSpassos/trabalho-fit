@@ -44,12 +44,12 @@ public class Main {
                                 String opcaoDeRefeicao = menu.imprimeMenuRefeicoes(usuarioLogin);
                                 String validadorDoIf = menu.validaInsercaoRefeicao();
                                 if(validadorDoIf.equals("1")){
-                                    String caloriasTotaisPorNome = menu.mostrarCaloriasTotaisPorNome(usuarioLogin,opcaoDeRefeicao);
-                                    Double subtracaoCalorias = Double.parseDouble(caloriasTotaisPorNome);
                                     try {
-                                        menu.mostrarRestanteDeCaloriasDiarias(dietaMetodo, subtracaoCalorias, primeiraRefeicaoDia);
+                                        double caloriasTotaisPorNome = menu.mostrarCaloriasTotaisPorNome(usuarioLogin,opcaoDeRefeicao);
+                                        menu.mostrarRestanteDeCaloriasDiarias(dietaMetodo, caloriasTotaisPorNome, primeiraRefeicaoDia);
                                     }catch (MinhaException e){
                                         menu.mostrarMensagemErro(e);
+                                        continue;
                                     }
                                     if(primeiraRefeicaoDia){
                                         primeiraRefeicaoDia = false;

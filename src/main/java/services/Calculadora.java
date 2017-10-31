@@ -1,22 +1,22 @@
 package services;
 
+import model.MinhaException;
+
 public class Calculadora {
 
     public double calculaIMC (double peso, double altura){
         return (peso / (altura * altura));
     }
 
-    public String calculaCaloriasbyGramas (double gramasInformadas, double calorias){
-        String retorno;
+    public double calculaCaloriasbyGramas (double gramasInformadas, double calorias){
 
         if(gramasInformadas<0){
-            retorno = "Não pode ser informado valor negativo de peso";
+            throw new MinhaException("Não pode ser informado gramas regativas");
         }else{
             double calculo = (gramasInformadas * calorias)/100;
-            retorno = String.valueOf(calculo);
+            return calculo;
         }
 
-        return retorno;
     }
 
     public double calculaCaloriasRestantes(double totalCaloriasLimiteDiarias, double caloriasComidas){

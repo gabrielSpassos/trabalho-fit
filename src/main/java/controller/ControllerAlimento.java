@@ -45,18 +45,18 @@ public class ControllerAlimento {
         }
     }
 
-    public String mostraCaloriasDoAlimentoPorGramas(Usuario userDieta, String opcaoDeRefeicao,String nomeDigitado, double quantidadeEmGramas){
+    public double mostraCaloriasDoAlimentoPorGramas(Usuario userDieta, String opcaoDeRefeicao,String nomeDigitado, double quantidadeEmGramas){
         try{
             if(validaNomeAlimentoComBanco(nomeDigitado,userDieta,opcaoDeRefeicao)){
                 double caloriasAlimento = alimentoDAO.getCaloriasByNome(nomeDigitado);
                 Calculadora calculadora = new Calculadora();
-                String caloriasAlimentoPorGramas = calculadora.calculaCaloriasbyGramas(quantidadeEmGramas,caloriasAlimento);
+                double caloriasAlimentoPorGramas = calculadora.calculaCaloriasbyGramas(quantidadeEmGramas,caloriasAlimento);
                 return caloriasAlimentoPorGramas;
             }
 
-            return "Não foi localizado calorias desse alimento";
+            throw new MinhaException("Não foi localizado calorias desse alimento");
         }catch (MinhaException e){
-            throw new MinhaException("Exception: Não foi localizado calorias desse alimento");
+            throw new MinhaException("Não foi localizado calorias desse alimento");
         }
 
     }
