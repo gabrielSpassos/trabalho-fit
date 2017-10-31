@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17391e70-c5af-448c-9b38-761ae734cdac" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/controller/ControllerAlimento.class" afterPath="$PROJECT_DIR$/out/production/classes/controller/ControllerAlimento.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/controller/ControllerMenu.class" afterPath="$PROJECT_DIR$/out/production/classes/controller/ControllerMenu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/controller/Main.class" afterPath="$PROJECT_DIR$/out/production/classes/controller/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/dao/UsuarioDAO.class" afterPath="$PROJECT_DIR$/out/production/classes/dao/UsuarioDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/Menu.class" afterPath="$PROJECT_DIR$/out/production/classes/view/Menu.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ControllerAlimento.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ControllerAlimento.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ControllerMenu.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ControllerMenu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/Main.java" afterPath="$PROJECT_DIR$/src/main/java/controller/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/Calculadora.java" afterPath="$PROJECT_DIR$/src/main/java/services/Calculadora.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/Dieta.java" afterPath="$PROJECT_DIR$/src/main/java/services/Dieta.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/Menu.java" afterPath="$PROJECT_DIR$/src/main/java/view/Menu.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="540">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,12 +46,35 @@
       <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6593#6594#0" expanded="true" />
-                <element signature="e#6652#6653#0" expanded="true" />
+                <element signature="method#menuInicial#0;class#Menu#0" expanded="false" />
+                <element signature="method#menuAdm#0;class#Menu#0" expanded="false" />
+                <element signature="method#menuLogin#0;class#Menu#0" expanded="false" />
+                <element signature="method#caseLogin#0;class#Menu#0" expanded="false" />
+                <element signature="method#listarDadosLogin#0;class#Menu#0" expanded="false" />
+                <element signature="method#caseListarUsuarios#0;class#Menu#0" expanded="false" />
+                <element signature="method#imprimeMenuRefeicoes#0;class#Menu#0" expanded="false" />
+                <element signature="method#mostraImcUsuario#0;class#Menu#0" expanded="false" />
+                <element signature="method#validaInsercaoRefeicao#0;class#Menu#0" expanded="false" />
+                <element signature="method#mostrarCaloriasTotaisPorNome#0;class#Menu#0" expanded="false" />
+                <element signature="method#mostrarRestanteDeCaloriasDiarias#0;class#Menu#0" expanded="false" />
+                <element signature="e#7558#7559#0" expanded="true" />
+                <element signature="e#7629#7630#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControllerMenu.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ControllerMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="98" column="60" lean-forward="true" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,8 +83,8 @@
       <file leaf-file-name="ControllerAlimento.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/ControllerAlimento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="732">
+              <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,27 +92,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calculadora.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/Calculadora.java">
+      <file leaf-file-name="UsuarioDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding>
-                <element signature="e#104#105#0" expanded="true" />
-                <element signature="e#153#154#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dieta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/Dieta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="e#1337#1338#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="2322">
+              <caret line="138" column="33" lean-forward="true" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -421,16 +432,17 @@
         <option value="$PROJECT_DIR$/src/main/java/model/Dieta.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/ConnectionFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/AlimentoDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ControllerMenu.java" />
         <option value="$PROJECT_DIR$/src/test/java/UsuarioDAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/UsuarioDAOTeste.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/UsuarioDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/Calculadora.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/Dieta.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/Menu.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ControllerAlimento.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/Main.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ControllerAlimentoTeste.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ControllerAlimento.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/Menu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ControllerMenu.java" />
       </list>
     </option>
   </component>
@@ -571,27 +583,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="controller.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="trabalho-fit_main" />
-      <envs />
-    </configuration>
-    <configuration name="UsuarioDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerAlimentoTeste" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="trabalho-fit_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UsuarioDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="ControllerAlimentoTeste" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -605,14 +603,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="UsuarioDAOTest.retornaId1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerAlimentoTeste.deveRetornarValorNumericoComFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="trabalho-fit_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UsuarioDAOTest" />
-      <option name="METHOD_NAME" value="retornaId1" />
+      <option name="MAIN_CLASS_NAME" value="ControllerAlimentoTeste" />
+      <option name="METHOD_NAME" value="deveRetornarValorNumericoComFalse" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -625,14 +623,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="UsuarioDAOTest.retornaListaDeNomes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerAlimentoTeste.deveRetornarValorNumericoComTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="trabalho-fit_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UsuarioDAOTest" />
-      <option name="METHOD_NAME" value="retornaListaDeNomes" />
+      <option name="MAIN_CLASS_NAME" value="ControllerAlimentoTeste" />
+      <option name="METHOD_NAME" value="deveRetornarValorNumericoComTrue" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -645,14 +643,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="UsuarioDAOTest.retornaQuantidadeDeListaDeNomes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerAlimentoTeste.deveRetornarValorNumericoPositivoComFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="trabalho-fit_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UsuarioDAOTest" />
-      <option name="METHOD_NAME" value="retornaQuantidadeDeListaDeNomes" />
+      <option name="MAIN_CLASS_NAME" value="ControllerAlimentoTeste" />
+      <option name="METHOD_NAME" value="deveRetornarValorNumericoPositivoComFalse" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -664,6 +662,25 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="controller.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="trabalho-fit_main" />
+      <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -747,19 +764,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.UsuarioDAOTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.UsuarioDAOTest.retornaId1" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UsuarioDAOTest.retornaListaDeNomes" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.UsuarioDAOTest.retornaQuantidadeDeListaDeNomes" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ControllerAlimentoTeste.deveRetornarValorNumericoComTrue" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ControllerAlimentoTeste.deveRetornarValorNumericoComFalse" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ControllerAlimentoTeste.deveRetornarValorNumericoPositivoComFalse" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ControllerAlimentoTeste" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UsuarioDAOTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UsuarioDAOTest.retornaListaDeNomes" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UsuarioDAOTest.retornaQuantidadeDeListaDeNomes" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.UsuarioDAOTest.retornaId1" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ControllerAlimentoTeste" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ControllerAlimentoTeste.deveRetornarValorNumericoPositivoComFalse" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ControllerAlimentoTeste.deveRetornarValorNumericoComFalse" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ControllerAlimentoTeste.deveRetornarValorNumericoComTrue" />
       </list>
     </recent_temporary>
   </component>
@@ -806,35 +823,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UsuarioDAOTest - 2017.10.30 at 15h 51m 10s.xml">
-      <configuration name="UsuarioDAOTest" configurationId="JUnit" />
+    <history-entry file="ControllerAlimentoTeste - 2017.10.31 at 09h 07m 39s.xml">
+      <configuration name="ControllerAlimentoTeste" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UsuarioDAOTest_retornaListaDeNomes - 2017.10.30 at 15h 40m 48s.xml">
-      <configuration name="UsuarioDAOTest.retornaListaDeNomes" configurationId="JUnit" />
+    <history-entry file="ControllerAlimentoTeste - 2017.10.31 at 09h 57m 02s.xml">
+      <configuration name="ControllerAlimentoTeste" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UsuarioDAOTest_retornaListaDeNomes - 2017.10.30 at 15h 41m 18s.xml">
-      <configuration name="UsuarioDAOTest.retornaListaDeNomes" configurationId="JUnit" />
+    <history-entry file="ControllerAlimentoTeste - 2017.10.31 at 10h 39m 36s.xml">
+      <configuration name="ControllerAlimentoTeste" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UsuarioDAOTest_retornaListaDeNomes - 2017.10.30 at 15h 42m 37s.xml">
-      <configuration name="UsuarioDAOTest.retornaListaDeNomes" configurationId="JUnit" />
+    <history-entry file="ControllerAlimentoTeste_deveRetornarValorNumerico - 2017.10.31 at 09h 40m 25s.xml">
+      <configuration name="ControllerAlimentoTeste.deveRetornarValorNumerico" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UsuarioDAOTest_retornaListaDeNomes - 2017.10.30 at 15h 46m 16s.xml">
-      <configuration name="UsuarioDAOTest.retornaListaDeNomes" configurationId="JUnit" />
+    <history-entry file="ControllerAlimentoTeste_deveRetornarValorNumericoComFalse - 2017.10.31 at 09h 41m 42s.xml">
+      <configuration name="ControllerAlimentoTeste.deveRetornarValorNumericoComFalse" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UsuarioDAOTest_retornaListaDeNomes - 2017.10.30 at 15h 46m 31s.xml">
-      <configuration name="UsuarioDAOTest.retornaListaDeNomes" configurationId="JUnit" />
+    <history-entry file="ControllerAlimentoTeste_deveRetornarValorNumericoComTrue - 2017.10.31 at 09h 41m 22s.xml">
+      <configuration name="ControllerAlimentoTeste.deveRetornarValorNumericoComTrue" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UsuarioDAOTest_retornaListaDeNomes - 2017.10.30 at 15h 49m 58s.xml">
-      <configuration name="UsuarioDAOTest.retornaListaDeNomes" configurationId="JUnit" />
+    <history-entry file="ControllerAlimentoTeste_deveRetornarValorNumericoPositivoComFalse - 2017.10.31 at 09h 47m 19s.xml">
+      <configuration name="ControllerAlimentoTeste.deveRetornarValorNumericoPositivoComFalse" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UsuarioDAOTest_retornaListaDeNomes - 2017.10.30 at 15h 50m 08s.xml">
-      <configuration name="UsuarioDAOTest.retornaListaDeNomes" configurationId="JUnit" />
+    <history-entry file="ControllerAlimentoTeste_deveRetornarValorNumericoPositivoComFalse - 2017.10.31 at 09h 56m 53s.xml">
+      <configuration name="ControllerAlimentoTeste.deveRetornarValorNumericoPositivoComFalse" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UsuarioDAOTest_retornaQuantidadeDeListaDeNomes - 2017.10.30 at 15h 48m 22s.xml">
-      <configuration name="UsuarioDAOTest.retornaQuantidadeDeListaDeNomes" configurationId="JUnit" />
+    <history-entry file="ControllerAlimentoTeste_deveRetornarValorNumericoPositivoComFalse - 2017.10.31 at 10h 37m 13s.xml">
+      <configuration name="ControllerAlimentoTeste.deveRetornarValorNumericoPositivoComFalse" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UsuarioDAOTest_retornaQuantidadeDeListaDeNomes - 2017.10.30 at 15h 49m 23s.xml">
-      <configuration name="UsuarioDAOTest.retornaQuantidadeDeListaDeNomes" configurationId="JUnit" />
+    <history-entry file="ControllerAlimentoTeste_deveRetornarValorNumericoPositivoComFalse - 2017.10.31 at 10h 38m 08s.xml">
+      <configuration name="ControllerAlimentoTeste.deveRetornarValorNumericoPositivoComFalse" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -882,43 +899,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/ControllerAlimento.java</url>
-          <line>90</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/ControllerAlimento.java</url>
-          <line>87</line>
-          <properties />
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="25" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/MinhaException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/Dieta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#1337#1338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -943,8 +928,8 @@
           <caret line="59" column="41" lean-forward="true" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6593#6594#0" expanded="true" />
-            <element signature="e#6652#6653#0" expanded="true" />
+            <element signature="e#7030#7031#0" expanded="true" />
+            <element signature="e#7112#7113#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -962,7 +947,7 @@
         <state relative-caret-position="216">
           <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -980,9 +965,9 @@
         <state relative-caret-position="1422">
           <caret line="79" column="8" lean-forward="true" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1191#1200#0" expanded="true" />
-            <element signature="e#2907#2916#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1181#1190#0" expanded="false" />
+            <element signature="e#2897#2906#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -992,8 +977,8 @@
         <state relative-caret-position="306">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#167#168#0" expanded="false" />
+            <element signature="e#194#195#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1013,7 +998,7 @@
         <state relative-caret-position="954">
           <caret line="53" column="70" lean-forward="true" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1049,9 +1034,9 @@
         <state relative-caret-position="342">
           <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1191#1200#0" expanded="true" />
-            <element signature="e#2907#2916#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1181#1190#0" expanded="false" />
+            <element signature="e#2897#2906#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1061,8 +1046,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="22" lean-forward="true" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
           <folding>
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#167#168#0" expanded="false" />
+            <element signature="e#194#195#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1140,16 +1125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DietaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1164,25 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#194#195#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Alimento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/db.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/db/ConnectionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1192,7 +1148,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/MinhaException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/AlimentoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -1200,69 +1166,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CalculadoraTest.java">
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/awt/Color.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/AlimentoDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Alimento.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AliementoDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/UsuarioDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="65" column="69" lean-forward="true" selection-start-line="65" selection-start-column="69" selection-end-line="65" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1230#1239#0" expanded="true" />
-            <element signature="e#1516#1525#0" expanded="true" />
-            <element signature="e#2156#2165#0" expanded="true" />
-            <element signature="e#2391#2400#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ControllerMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="102" column="47" lean-forward="true" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="117" column="63" lean-forward="false" selection-start-line="117" selection-start-column="63" selection-end-line="117" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1191#1200#0" expanded="true" />
-            <element signature="e#2907#2916#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="36">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,13 +1193,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ControllerAlimento.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/MinhaException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="36">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,22 +1211,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/Menu.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+        <state relative-caret-position="2322">
+          <caret line="138" column="33" lean-forward="true" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ControllerAlimento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="732">
+          <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6593#6594#0" expanded="true" />
-            <element signature="e#6652#6653#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/UsuarioDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="65" column="69" lean-forward="true" selection-start-line="65" selection-start-column="69" selection-end-line="65" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/DietaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ControllerAlimentoTeste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-212">
+          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CalculadoraTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AliementoDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="540">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#menuInicial#0;class#Menu#0" expanded="false" />
+            <element signature="method#menuAdm#0;class#Menu#0" expanded="false" />
+            <element signature="method#menuLogin#0;class#Menu#0" expanded="false" />
+            <element signature="method#caseLogin#0;class#Menu#0" expanded="false" />
+            <element signature="method#listarDadosLogin#0;class#Menu#0" expanded="false" />
+            <element signature="method#caseListarUsuarios#0;class#Menu#0" expanded="false" />
+            <element signature="method#imprimeMenuRefeicoes#0;class#Menu#0" expanded="false" />
+            <element signature="method#mostraImcUsuario#0;class#Menu#0" expanded="false" />
+            <element signature="method#validaInsercaoRefeicao#0;class#Menu#0" expanded="false" />
+            <element signature="method#mostrarCaloriasTotaisPorNome#0;class#Menu#0" expanded="false" />
+            <element signature="method#mostrarRestanteDeCaloriasDiarias#0;class#Menu#0" expanded="false" />
+            <element signature="e#7558#7559#0" expanded="true" />
+            <element signature="e#7629#7630#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ControllerMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="98" column="60" lean-forward="true" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

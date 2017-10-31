@@ -4,11 +4,16 @@ import dao.UsuarioDAO;
 import model.Usuario;
 import model.MinhaException;
 import services.Calculadora;
+import view.Menu;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ControllerMenu {
+
+    //variaveis para printar colorido no console
+    private final String ANSI_RESET = "\u001B[0m";
+    private final String ANSI_PURPLE = "\u001B[35m";
 
     UsuarioDAO pessoaDAO = new UsuarioDAO();
     Usuario pessoa = new Usuario();
@@ -20,7 +25,7 @@ public class ControllerMenu {
             listaUsuario = pessoaDAO.read();
             for(int i = 0;i<listaUsuario.size();i++){
                 if(listaUsuario.get(i).getNome().equalsIgnoreCase(nomeLogin)){
-                    System.out.println("Login com sucesso");
+                    System.out.println(ANSI_PURPLE + "Login com sucesso"+ ANSI_RESET);
                     return listaUsuario.get(i);
                 }
             }
@@ -37,15 +42,16 @@ public class ControllerMenu {
     }
 
 
-    public void createUsuario(String nome,double peso, double altura){
+    public String createUsuario(String nome,double peso, double altura){
         Usuario pessoa = new Usuario();
         try {
             pessoa.setNome(nome);
             pessoa.setPeso(peso);
             pessoa.setAltura(altura);
-            pessoaDAO.create(pessoa);
+            String mensagem = pessoaDAO.create(pessoa);
+            return mensagem;
         }catch (MinhaException e){
-            System.out.println(e.getMessage());
+            throw e;
         }
     }
 
@@ -90,27 +96,29 @@ public class ControllerMenu {
             }
         }
 
-        throw new MinhaException("Erro ao pegar o id pelo nome");
+        throw new MinhaException("Usuário não cadastrado!");
     }
 
-    public void updateUsuario(double peso , double altura, int idAtualizacao){
+    public String updateUsuario(double peso , double altura, int idAtualizacao){
 
         pessoa.setPeso(peso);
         pessoa.setAltura(altura);
         try{
-            pessoaDAO.update(pessoa,idAtualizacao);
+            String mensagem = pessoaDAO.update(pessoa,idAtualizacao);
+            return mensagem;
         }catch(MinhaException e){
-            System.out.println(e.getMessage());
+            throw e;
         }
 
 
     }
 
-    public void deleteUsuario(int id){
+    public String deleteUsuario(int id){
         try{
-            pessoaDAO.delete(id);
+            String mensagem = pessoaDAO.delete(id);
+            return mensagem;
         }catch (MinhaException e){
-            System.out.println(e.getMessage());
+            throw e;
         }
 
     }

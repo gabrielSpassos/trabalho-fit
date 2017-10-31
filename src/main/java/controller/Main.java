@@ -5,19 +5,11 @@ import services.Dieta;
 import view.Menu;
 import model.MinhaException;
 
-import java.sql.SQLException;
-
-
-
 public class Main {
-    public static void main(String[] args) throws SQLException {
-        //variaveis para printar colorido no console
-        final String ANSI_RESET = "\u001B[0m";
-        final String ANSI_RED = "\u001B[31m";
+    public static void main(String[] args){
 
         Menu menu = new Menu();
         Usuario usuarioLogin = new Usuario();
-        ControllerAlimento controllerAlimento = new ControllerAlimento();
 
         byte sair = 0;
         do {
@@ -33,7 +25,7 @@ public class Main {
                         menu.mostraImcUsuario(usuarioLogin);
 
                     } catch (MinhaException e) {
-                        System.out.println(ANSI_RED + e.getMessage() + ANSI_RESET);
+                        menu.mostrarMensagemErro(e);
                         sairLogin = 1;
                     }
 
@@ -52,16 +44,20 @@ public class Main {
                                 String opcaoDeRefeicao = menu.imprimeMenuRefeicoes(usuarioLogin);
                                 String validadorDoIf = menu.validaInsercaoRefeicao();
                                 if(validadorDoIf.equals("1")){
-                                    String caloriasTotais = menu.mostrarCaloriasTotaisPorNome(usuarioLogin,opcaoDeRefeicao);
-                                    Double subtracaoCalorias = Double.parseDouble(caloriasTotais);
-                                    menu.mostrarRestanteDeCaloriasDiarias(dietaMetodo,subtracaoCalorias,primeiraRefeicaoDia);
-                                    if(primeiraRefeicaoDia == true){
+                                    String caloriasTotaisPorNome = menu.mostrarCaloriasTotaisPorNome(usuarioLogin,opcaoDeRefeicao);
+                                    Double subtracaoCalorias = Double.parseDouble(caloriasTotaisPorNome);
+                                    try {
+                                        menu.mostrarRestanteDeCaloriasDiarias(dietaMetodo, subtracaoCalorias, primeiraRefeicaoDia);
+                                    }catch (MinhaException e){
+                                        menu.mostrarMensagemErro(e);
+                                    }
+                                    if(primeiraRefeicaoDia){
                                         primeiraRefeicaoDia = false;
                                     }
                                 }else if(validadorDoIf.equals("2")){
                                     menu.mostrarMensagemVolteSempre();
                                 }else{
-                                    System.out.println("Opção Inválida");
+                                    menu.mostrarMensagemOpcaoInvalida();
                                 }
                                 break;
                             case "x":
@@ -71,7 +67,7 @@ public class Main {
                                 sairLogin = 1;
                                 break;
                             default:
-                                System.out.println("Opção Inválida");
+                                menu.mostrarMensagemOpcaoInvalida();
                         }
                     }
 
@@ -90,7 +86,7 @@ public class Main {
                             try{
                                 menu.caseAtualizarUsuarioPegarNome();
                             }catch (MinhaException e){
-                                System.out.println(ANSI_RED + e.getMessage() + ANSI_RESET);
+                                menu.mostrarMensagemErro(e);
                                 continue;
                             }
                             break;
@@ -98,7 +94,7 @@ public class Main {
                             try{
                                 menu.caseExcluiUsuarioPorNome();
                             }catch (MinhaException e){
-                                System.out.println(ANSI_RED + e.getMessage() + ANSI_RESET);
+                                menu.mostrarMensagemErro(e);
                                 continue;
                             }
                             break;
@@ -109,7 +105,7 @@ public class Main {
                             sair = 1;
                             break;
                         default:
-                            System.out.println("Opção Inválida");
+                            menu.mostrarMensagemOpcaoInvalida();
                     }
                     break;
                 case "x":
@@ -119,11 +115,11 @@ public class Main {
                     sair = 1;
                     break;
                 default:
-                    System.out.println("Opção Inválida");
+                    menu.mostrarMensagemOpcaoInvalida();
 
             }
         }while(sair == 0);
 
-        System.out.println("Thanks for trying FitApp :D");
+        menu.mostrarMensagemDespedida();
     }
 }

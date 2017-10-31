@@ -13,7 +13,8 @@ import model.MinhaException;
 
 public class UsuarioDAO{
 
-    public void create(Usuario u){
+
+    public String create(Usuario u){
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
 
@@ -24,7 +25,7 @@ public class UsuarioDAO{
             stmt.setDouble(3,u.getAltura());
             stmt.executeUpdate();
 
-            System.out.println("Salvo com Sucesso");
+            return "Salvo com Sucesso";
         } catch (SQLException e) {
             throw new MinhaException("Não foi possível cadastrar usuário");
         }finally {
@@ -110,7 +111,7 @@ public class UsuarioDAO{
 
    }
 
-    public void update(Usuario u, int id){
+    public String update(Usuario u, int id){
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
 
@@ -121,7 +122,7 @@ public class UsuarioDAO{
             stmt.setInt(3,id);
             stmt.executeUpdate();
 
-            System.out.println("Atualizado com Sucesso");
+            return "Atualizado com Sucesso";
         } catch (SQLException e) {
             throw new MinhaException("Erro, não foi possível encontrar o usuário");
         }finally {
@@ -129,14 +130,14 @@ public class UsuarioDAO{
         }
     }
 
-    public void delete (int id){
+    public String delete (int id){
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
         try {
             stmt  = con.prepareStatement("DELETE FROM usuario WHERE id = ?");
             stmt.setInt(1,id);
             stmt.executeUpdate();
-            System.out.println("Excluido com Sucesso");
+            return "Excluido com Sucesso";
         } catch (SQLException e) {
             throw new MinhaException("Erro, não foi possível deletar usuário");
         }finally {

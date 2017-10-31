@@ -6,8 +6,8 @@ import model.Usuario;
 import dao.AlimentoDAO;
 import services.Calculadora;
 import services.Dieta;
+import view.Menu;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ControllerAlimento {
@@ -33,7 +33,8 @@ public class ControllerAlimento {
                 alimentosList = alimentoDAO.read(caloriasLimite,3);
                 break;
             default:
-                System.out.println("Opção inválida");
+                Menu menu = new Menu();
+                menu.mostrarMensagemOpcaoInvalida();
         }
 
         if(alimentosList!=null){
@@ -85,11 +86,21 @@ public class ControllerAlimento {
         if(primeiraRefeicaoDia) {
             totalCaloriasLimiteDiarias = dietaMetodo.decideTotalCaloriasLimiteDiarias();
         }else{
+            if(dietaMetodo.getTotalCaloriasLimiteDiarias()<=0){
+                throw new MinhaException("Você já gastou todas as calorias diárias");
+            }
             totalCaloriasLimiteDiarias = dietaMetodo.getTotalCaloriasLimiteDiarias();
         }
         double subtracaoCalorias = calculadora.calculaCaloriasRestantes(totalCaloriasLimiteDiarias,caloriasComidas);
         dietaMetodo.setTotalCaloriasLimiteDiarias(subtracaoCalorias);
-        return subtracaoCalorias;
+        if(subtracaoCalorias<=0){
+            double valorAbsolutoSubtracaoCalorias = Math.abs(subtracaoCalorias);
+            throw new MinhaException("Você já gastou todas as calorias diárias, você comeu a mais "+valorAbsolutoSubtracaoCalorias+ " calorias do limite da sua dieta");
+        }else{
+            return subtracaoCalorias;
+        }
+
+
     }
 
 

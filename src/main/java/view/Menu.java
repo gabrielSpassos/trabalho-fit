@@ -1,5 +1,6 @@
 package view;
 
+import model.MinhaException;
 import model.Usuario;
 import controller.ControllerMenu;
 import controller.ControllerAlimento;
@@ -11,6 +12,12 @@ import java.util.Scanner;
 
 
 public class Menu {
+
+    //variaveis para printar colorido no console
+    final String ANSI_RESET = "\u001B[0m";
+    final String ANSI_RED = "\u001B[31m";
+    final String ANSI_BLUE = "\u001B[34m";
+    final String ANSI_PURPLE = "\u001B[35m";
 
     Scanner ler = new Scanner(System.in);
     ControllerMenu controllerMenu = new ControllerMenu();
@@ -73,8 +80,8 @@ public class Menu {
         double pesoPessoa = ler.nextDouble();
         System.out.print("Digite sua altura em metros: ");
         double alturaPessoa = ler.nextDouble();
-        controllerMenu.createUsuario(nomePessoa,pesoPessoa,alturaPessoa);
-
+        String mensagem = controllerMenu.createUsuario(nomePessoa,pesoPessoa,alturaPessoa);
+        mostrarMensagemSucesso(mensagem);
     }
 
     public void caseListarUsuarios(){
@@ -102,12 +109,13 @@ public class Menu {
 
     }
 
-    public void caseAtualizarUsuario(String nomeAtualizacao, int idAtualizacao){
+    private void caseAtualizarUsuario(String nomeAtualizacao, int idAtualizacao){
         System.out.print("Digite o novo peso do(a) "+nomeAtualizacao+": ");
         double pesoPessoa = ler.nextDouble();
         System.out.print("Digite a nova altura do(a) "+nomeAtualizacao+": ");
         double alturaPessoa = ler.nextDouble();
-        controllerMenu.updateUsuario(pesoPessoa,alturaPessoa,idAtualizacao);
+        String mensagem = controllerMenu.updateUsuario(pesoPessoa,alturaPessoa,idAtualizacao);
+        mostrarMensagemSucesso(mensagem);
     }
 
     public void caseExcluiUsuarioPorNome(){
@@ -115,7 +123,8 @@ public class Menu {
         System.out.print("Digite o nome do usuário a ser excluído: ");
         String nomeExclusao = ler.nextLine();
         int idExclusao = controllerMenu.pegarIdPorNome(nomeExclusao);
-        controllerMenu.deleteUsuario(idExclusao);
+        String mensagem = controllerMenu.deleteUsuario(idExclusao);
+        mostrarMensagemSucesso(mensagem);
     }
 
     public String imprimeMenuRefeicoes(Usuario user){
@@ -137,7 +146,7 @@ public class Menu {
         System.out.println("\nQuer inserir uma refeição feita: ");
         System.out.println("1 - Sim");
         System.out.println("2 - Não");
-        System.out.println("Digite sua opção: ");
+        System.out.print("Digite sua opção: ");
         String opcao = ler.nextLine();
         return opcao;
     }
@@ -145,7 +154,7 @@ public class Menu {
     public String mostrarCaloriasTotaisPorNome(Usuario user, String opcaoDeRefeicao){
         System.out.print("\nDigite o nome da refeição feita: ");
         String nomeRefeicao = ler.nextLine();
-        System.out.print("\nDigite quantos gramas você comeu de "+nomeRefeicao+": ");
+        System.out.print("\nDigite quantos gramas/litros você comeu de "+nomeRefeicao+": ");
         double quantidadeEmGramas = ler.nextDouble();
         String caloriasTotais = controllerAlimento.mostraCaloriasDoAlimentoPorGramas(user, opcaoDeRefeicao,nomeRefeicao,quantidadeEmGramas);
         System.out.printf("Calorias totais ingeridas: "+caloriasTotais+"\n");
@@ -159,8 +168,23 @@ public class Menu {
     }
 
     public void mostrarMensagemVolteSempre(){
-        System.out.println("Pode voltar sempre ;)");
+        System.out.println(ANSI_BLUE+ "Pode voltar sempre ;)"+ ANSI_RESET);
     }
 
+    public void mostrarMensagemOpcaoInvalida(){
+        System.out.println(ANSI_RED+ "Opção Inválida" + ANSI_RESET);
+    }
+
+    public void mostrarMensagemDespedida(){
+        System.out.println(ANSI_BLUE+ "Thanks for trying FitApp :D"+ ANSI_RESET);
+    }
+
+    public void mostrarMensagemErro(MinhaException e){
+        System.out.println(ANSI_RED + e.getMessage() + ANSI_RESET);
+    }
+
+    private void mostrarMensagemSucesso(String mensagem){
+        System.out.println(ANSI_PURPLE + mensagem + ANSI_RESET);
+    }
 
 }
