@@ -18,11 +18,11 @@ public class Dieta {
         Calculadora calculadora = new Calculadora();
         Double imc = calculadora.calculaIMC(this.user.getPeso(),this.user.getAltura());
         if(imc<18.4){ //abaixo do peso ideal
-            return this.caloriasLimite = 200;
+            return this.caloriasLimite = 400;
         }else if(imc>=18.5 && imc<25){ // está no peso ideal
-            return this.caloriasLimite = 100;
+            return this.caloriasLimite = 250;
         }else{
-            return this.caloriasLimite = 50; //está obeso
+            return this.caloriasLimite = 100; //está obeso
         }
     }
 
@@ -30,11 +30,11 @@ public class Dieta {
         Calculadora calculadora = new Calculadora();
         Double imc = calculadora.calculaIMC(this.user.getPeso(),this.user.getAltura());
         if(imc<18.4){ //abaixo do peso ideal
-            return this.totalCaloriasLimiteDiarias = 2000;
+            return this.totalCaloriasLimiteDiarias = 4000;
         }else if(imc>=18.5 && imc<25){ // está no peso ideal
-            return this.totalCaloriasLimiteDiarias = 1000;
+            return this.totalCaloriasLimiteDiarias = 2000;
         }else{
-            return this.totalCaloriasLimiteDiarias = 500; //está obeso
+            return this.totalCaloriasLimiteDiarias = 1250; //está obeso
         }
     }
 

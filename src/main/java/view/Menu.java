@@ -157,7 +157,7 @@ public class Menu {
         System.out.print("\nDigite quantos gramas/litros você comeu de "+nomeRefeicao+": ");
         double quantidadeEmGramas = ler.nextDouble();
         double caloriasTotais = controllerAlimento.mostraCaloriasDoAlimentoPorGramas(user, opcaoDeRefeicao,nomeRefeicao,quantidadeEmGramas);
-        System.out.printf("Calorias totais ingeridas: "+caloriasTotais+"\n");
+        System.out.printf("Calorias totais ingeridas de "+nomeRefeicao+": "+caloriasTotais+"\n");
         return caloriasTotais;
     }
 

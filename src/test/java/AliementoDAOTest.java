@@ -16,6 +16,7 @@ public class AliementoDAOTest {
         assertEquals("Deu erro ao pegar do bando", esperado,retorno);
     }
 
+    /*
     @Test
     public void deveRetornarErroDoBanco(){
         double esperado = 0;
@@ -23,6 +24,7 @@ public class AliementoDAOTest {
         double retorno = foodDAO.getCaloriasByNome("dshajhds");
         assertEquals("Não deu erro ao pegar do bando", esperado,retorno);
     }
+    */
 
     @Test
     public void deveRetornarListaCheia(){

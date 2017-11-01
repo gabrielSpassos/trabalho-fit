@@ -42,25 +42,24 @@ public class Main {
                             case "2":
                                 //case de informar refeicao
                                 String opcaoDeRefeicao = menu.imprimeMenuRefeicoes(usuarioLogin);
-                                if(!(opcaoDeRefeicao.equals("1"))|| !(opcaoDeRefeicao.equals("2")) || !(opcaoDeRefeicao.equals("3"))){
-                                    break;
-                                }
-                                String validadorDoIf = menu.validaInsercaoRefeicao();
-                                if(validadorDoIf.equals("1")){
-                                    try {
-                                        double caloriasTotaisPorNome = menu.mostrarCaloriasTotaisPorNome(usuarioLogin,opcaoDeRefeicao);
-                                        menu.mostrarRestanteDeCaloriasDiarias(dietaMetodo, caloriasTotaisPorNome, primeiraRefeicaoDia);
-                                    }catch (MinhaException e){
-                                        menu.mostrarMensagemErro(e);
-                                        continue;
+                                if((opcaoDeRefeicao.equals("1"))|| (opcaoDeRefeicao.equals("2")) || (opcaoDeRefeicao.equals("3"))){
+                                    String validadorDoIf = menu.validaInsercaoRefeicao();
+                                    if(validadorDoIf.equals("1")){
+                                        try {
+                                            double caloriasTotaisPorNome = menu.mostrarCaloriasTotaisPorNome(usuarioLogin,opcaoDeRefeicao);
+                                            menu.mostrarRestanteDeCaloriasDiarias(dietaMetodo, caloriasTotaisPorNome, primeiraRefeicaoDia);
+                                        }catch (MinhaException e){
+                                            menu.mostrarMensagemErro(e);
+                                            continue;
+                                        }
+                                        if(primeiraRefeicaoDia){
+                                            primeiraRefeicaoDia = false;
+                                        }
+                                    }else if(validadorDoIf.equals("2")){
+                                        menu.mostrarMensagemVolteSempre();
+                                    }else{
+                                        menu.mostrarMensagemOpcaoInvalida();
                                     }
-                                    if(primeiraRefeicaoDia){
-                                        primeiraRefeicaoDia = false;
-                                    }
-                                }else if(validadorDoIf.equals("2")){
-                                    menu.mostrarMensagemVolteSempre();
-                                }else{
-                                    menu.mostrarMensagemOpcaoInvalida();
                                 }
                                 break;
                             case "x":

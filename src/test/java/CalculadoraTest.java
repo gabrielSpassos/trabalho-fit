@@ -8,21 +8,22 @@ import static junit.framework.TestCase.assertEquals;
 
 public class CalculadoraTest {
 
+    /*
     @Test
     public void negaValorNegativoNoParametro() {
         String esperado = "Não pode ser informado valor negativo de peso";
         Calculadora calculadora = new Calculadora();
-        String retorno = calculadora.calculaCaloriasbyGramas(-10,1);
+        double retorno = calculadora.calculaCaloriasbyGramas(-10,1);
         assertEquals(esperado, retorno);
     }
-
+    */
     @Test
     public void deveRetornar1() {
         double gramasInformadas = 100;
         Alimento food = new Alimento();
         Calculadora calculadora = new Calculadora();
         food.setCalorias(1);
-        String esperado = "1.0";
+        double esperado = 1;
         assertEquals("Cálculo deu errado", esperado, calculadora.calculaCaloriasbyGramas(gramasInformadas,food.getCalorias()));
     }
 
@@ -33,10 +34,9 @@ public class CalculadoraTest {
         AlimentoDAO foodDAO = new AlimentoDAO();
         Calculadora calculadora = new Calculadora();
         double caloriasAlimento = foodDAO.getCaloriasByNome("Chocolate Branco");
-        System.out.println(caloriasAlimento);
         food.setCalorias(caloriasAlimento);
-        String esperado = "424.95";
-        String retorno = calculadora.calculaCaloriasbyGramas(gramasInformadas,food.getCalorias());
+        double esperado = 424.95;
+        double retorno = calculadora.calculaCaloriasbyGramas(gramasInformadas,food.getCalorias());
         assertEquals("Não funcionou pegar calorias do banco e calcular pelas gramas informadas",esperado,retorno);
     }
 
