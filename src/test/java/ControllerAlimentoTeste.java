@@ -6,6 +6,7 @@ import org.junit.Test;
 import services.Dieta;
 
 import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class ControllerAlimentoTeste {
     Usuario userDieta = new Usuario();
@@ -29,15 +30,18 @@ public class ControllerAlimentoTeste {
         assertEquals(esperado,retorno);
     }
 
-    /*
+
     @Test
     public void deveRetornarFalhaAoEncontrarAlimento(){
-        String esperado = "Não foi localizado calorias desse alimento";
+
         ControllerAlimento controllerAlimento = new ControllerAlimento();
-        double retorno = controllerAlimento.mostraCaloriasDoAlimentoPorGramas(userDieta,"3","alimento não registrado",200);
-        assertEquals(esperado, retorno);
+        try {
+            controllerAlimento.mostraCaloriasDoAlimentoPorGramas(userDieta, "3", "alimento não registrado", 200);
+        }catch (MinhaException e){
+            assertTrue(true);
+        }
     }
-    */
+
 
     @Test
     public void deveRetornarValorNumericoComTrue(){
@@ -48,15 +52,18 @@ public class ControllerAlimentoTeste {
         assertEquals(esperado,retorno);
     }
 
-    /*
+
     @Test
     public void deveRetornarValorNumericoPositivoComFalse(){
         ControllerAlimento controllerAlimento = new ControllerAlimento();
         Dieta dieta = new Dieta(userDieta);
-        MinhaException esperado = new MinhaException("Você já gastou todas as calorias diárias");
-        double retorno = controllerAlimento.calculaSubtracaoDasCaloriasDiarias(dieta,200,false);
-        assertEquals(esperado,retorno);
+
+        try {
+            controllerAlimento.calculaSubtracaoDasCaloriasDiarias(dieta, 200, false);
+        }catch (MinhaException e){
+            assertTrue(true);
+        }
     }
 
-    */
+
 }

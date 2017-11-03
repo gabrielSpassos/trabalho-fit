@@ -1,22 +1,28 @@
 import dao.AlimentoDAO;
 import model.Alimento;
+import model.MinhaException;
 import services.Calculadora;
 import model.Usuario;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class CalculadoraTest {
 
-    /*
+
     @Test
     public void negaValorNegativoNoParametro() {
-        String esperado = "Não pode ser informado valor negativo de peso";
+
         Calculadora calculadora = new Calculadora();
-        double retorno = calculadora.calculaCaloriasbyGramas(-10,1);
-        assertEquals(esperado, retorno);
+        try {
+            double retorno = calculadora.calculaCaloriasbyGramas(-10, 1);
+        }catch (MinhaException e){
+            assertTrue(true);
+        }
     }
-    */
+
+
     @Test
     public void deveRetornar1() {
         double gramasInformadas = 100;

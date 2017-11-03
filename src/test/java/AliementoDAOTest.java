@@ -1,12 +1,17 @@
 import dao.AlimentoDAO;
 import model.Alimento;
+import model.MinhaException;
 import org.junit.Test;
+
 
 import java.util.List;
 
 import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 
 public class AliementoDAOTest {
+
 
     @Test
     public void deveRetornar26CaloriasDoBanco(){
@@ -16,15 +21,19 @@ public class AliementoDAOTest {
         assertEquals("Deu erro ao pegar do bando", esperado,retorno);
     }
 
-    /*
+
     @Test
-    public void deveRetornarErroDoBanco(){
-        double esperado = 0;
+    public void deveRetornarExceptionDoBanco(){
+
         AlimentoDAO foodDAO = new AlimentoDAO();
-        double retorno = foodDAO.getCaloriasByNome("dshajhds");
-        assertEquals("Não deu erro ao pegar do bando", esperado,retorno);
+        try{
+            foodDAO.getCaloriasByNome("dshajhds");
+        }catch (MinhaException e){
+            assertTrue(true);
+        }
+
     }
-    */
+
 
     @Test
     public void deveRetornarListaCheia(){
@@ -43,4 +52,8 @@ public class AliementoDAOTest {
         assertEquals("retornou erro!!",0,lista.size());
 
     }
+
+
+
+
 }

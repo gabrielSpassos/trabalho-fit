@@ -7,19 +7,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class UsuarioDAOTest {
 
-    /*
+
     @Test
     public void pegarIdPorNomeInvalido(){
-        MinhaException esperado = new MinhaException("Não foi possível encontrar um ID pelo nome passado");
+
         UsuarioDAO pessoaDAO = new UsuarioDAO();
-        int retorno = pessoaDAO.getIdbyName("teste");
-        assertEquals(esperado,retorno);
+        try {
+            pessoaDAO.getIdbyName("testeInvalido");
+        }catch (MinhaException e){
+            assertTrue(true);
+        }
     }
 
-    */
+
 
     @Test
     public void retornaId1(){
