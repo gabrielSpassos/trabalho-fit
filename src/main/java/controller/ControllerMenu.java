@@ -4,7 +4,6 @@ import dao.UsuarioDAO;
 import model.Usuario;
 import model.MinhaException;
 import services.Calculadora;
-import view.Menu;
 
 import java.util.ArrayList;
 import java.util.List;

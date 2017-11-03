@@ -1,4 +1,4 @@
-import controller.ControllerAlimento;
+
 import controller.ControllerMenu;
 import model.Usuario;
 import org.junit.Test;
@@ -6,18 +6,6 @@ import org.junit.Test;
 import static junit.framework.TestCase.assertEquals;
 
 public class ControllerMenuTest {
-
-    /*
-    @Test
-    public void retornaUsuarioValido(){
-        Usuario usuarioEsperado = new Usuario();
-        usuarioEsperado.setNome("Gabriel Santos dos Passos");
-        ControllerMenu controllerMenu = new ControllerMenu();
-        Usuario usuarioRetorno = controllerMenu.loginUsuario("Gabriel Santos dos Passos");
-        assertEquals(usuarioEsperado,usuarioRetorno);
-
-    }
-    */
 
     @Test
     public void deveEncontrarNomeCorrespondente(){

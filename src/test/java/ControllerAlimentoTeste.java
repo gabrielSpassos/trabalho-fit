@@ -1,5 +1,4 @@
 import controller.ControllerAlimento;
-import dao.AlimentoDAO;
 import model.MinhaException;
 import model.Usuario;
 import org.junit.Test;
@@ -7,6 +6,7 @@ import services.Dieta;
 
 import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertTrue;
+
 
 public class ControllerAlimentoTeste {
     Usuario userDieta = new Usuario();
@@ -41,7 +41,6 @@ public class ControllerAlimentoTeste {
             assertTrue(true);
         }
     }
-
 
     @Test
     public void deveRetornarValorNumericoComTrue(){

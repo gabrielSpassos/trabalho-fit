@@ -10,7 +10,7 @@ import view.Menu;
 
 import java.util.List;
 
-public class ControllerAlimento {
+public class ControllerAlimento{
 
     AlimentoDAO alimentoDAO = new AlimentoDAO();
 
