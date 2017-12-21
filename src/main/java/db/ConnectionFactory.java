@@ -7,7 +7,7 @@ public class ConnectionFactory {
     private static final  String DRIVER = "com.mysql.jdbc.Driver";
     private static final  String URL = "jdbc:mysql://localhost:3306/appfit";
     private static final  String USER = "root";
-    private static final  String PASS = "Inter#2104";
+    private static final  String PASS = "senha";
 
     public static Connection getConnection(){
         try {
